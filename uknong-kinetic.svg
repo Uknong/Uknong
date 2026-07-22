@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">욱농 키네틱 앰비그램</title>
+  <desc id="desc">Pretendard ExtraBold의 욱농이 세 조각으로 움직이며 180도 회전한 뒤 다시 같은 욱농으로 맞물리는 애니메이션</desc>
+
+  <defs>
+    <g id="wordmark" transform="scale(0.12470998 -0.12470998) translate(-1772.000000 -712.988273)"><path d="M1722 790H48V564H738V418H234V192H1232V-192H1520V418H1026V564H1722ZM884 1610C476 1610 210 1468 210 1242C210 1016 476 874 884 874C1290 874 1556 1016 1558 1242C1556 1468 1290 1610 884 1610ZM884 1388C1124 1388 1260 1338 1260 1242C1260 1144 1124 1098 884 1098C642 1098 508 1144 510 1242C508 1338 642 1388 884 1388Z"/><path transform="translate(1770 0)" d="M1536 1202H542V1618H254V972H744V808H48V578H1726V808H1028V972H1536ZM882 494C480 494 236 368 236 152C236 -68 480 -194 882 -192C1282 -194 1522 -68 1522 152C1522 368 1282 494 882 494ZM882 274C1118 274 1234 238 1234 152C1234 66 1118 26 882 24C640 26 528 66 530 152C528 238 640 274 882 274Z"/></g>
+    <clipPath id="top"><rect x="-243.00" y="-130.86" width="486.00" height="93.24"/></clipPath>
+    <clipPath id="middle"><rect x="-243.00" y="-37.62" width="486.00" height="75.24"/></clipPath>
+    <clipPath id="bottom"><rect x="-243.00" y="37.62" width="486.00" height="93.24"/></clipPath>
+    <style>
+      .ink { fill: #1f2328; }
+      .echo { fill: none; stroke: #1f2328; stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+      .shirt { fill: #63ff8d; }
+      .pants { fill: #e34a08; }
+      @media (prefers-color-scheme: dark) {
+        .ink { fill: #f0f3f6; }
+        .echo { stroke: #f0f3f6; }
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(480 180)">
+    <!-- 회전 순간에만 보이는 얇은 잔상 -->
+    <g class="echo" opacity="0">
+      <use href="#wordmark"/>
+      <animate attributeName="opacity" dur="7s" repeatCount="indefinite"
+        keyTimes="0;.18;.26;.42;.48;.60;.68;.84;.90;1"
+        values="0;0;.13;.04;0;0;.13;.04;0;0"/>
+      <animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite"
+        calcMode="spline" keyTimes="0;.23;.44;.63;.84;1"
+        keySplines="0 0 1 1;.72 0 .28 1;0 0 1 1;.72 0 .28 1;0 0 1 1"
+        values="0;0;180;180;360;360"/>
+    </g>
+
+    <!-- 위 조각 -->
+    <g clip-path="url(#top)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite"
+          calcMode="spline" keyTimes="0;.20;.39;.60;.79;1"
+          keySplines="0 0 1 1;.72 0 .28 1;0 0 1 1;.72 0 .28 1;0 0 1 1"
+          values="0;0;180;180;360;360"/>
+        <g>
+          <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
+            keyTimes="0;.15;.20;.30;.55;.60;.70;.80;1"
+            values="0 0;0 0;-18 0;0 0;0 0;18 0;0 0;0 0;0 0"/>
+          <use class="ink" href="#wordmark"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- 가운데 조각 -->
+    <g clip-path="url(#middle)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite"
+          calcMode="spline" keyTimes="0;.22;.41;.62;.81;1"
+          keySplines="0 0 1 1;.72 0 .28 1;0 0 1 1;.72 0 .28 1;0 0 1 1"
+          values="0;0;180;180;360;360"/>
+        <g>
+          <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
+            keyTimes="0;.17;.22;.32;.57;.62;.72;.82;1"
+            values="0 0;0 0;14 0;0 0;0 0;-14 0;0 0;0 0;0 0"/>
+          <use class="ink" href="#wordmark"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- 아래 조각 -->
+    <g clip-path="url(#bottom)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite"
+          calcMode="spline" keyTimes="0;.24;.43;.64;.83;1"
+          keySplines="0 0 1 1;.72 0 .28 1;0 0 1 1;.72 0 .28 1;0 0 1 1"
+          values="0;0;180;180;360;360"/>
+        <g>
+          <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
+            keyTimes="0;.19;.24;.34;.59;.64;.74;.84;1"
+            values="0 0;0 0;-18 0;0 0;0 0;18 0;0 0;0 0;0 0"/>
+          <use class="ink" href="#wordmark"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- 조각이 갈라지는 찰나에만 나타나는 절단선 -->
+    <g opacity="0">
+      <rect class="shirt" x="-215.00" y="-38.62" width="430.00" height="2" rx="1"/>
+      <rect class="pants" x="-215.00" y="36.62" width="430.00" height="2" rx="1"/>
+      <animate attributeName="opacity" dur="7s" repeatCount="indefinite"
+        keyTimes="0;.16;.21;.28;.34;.56;.61;.68;.74;1"
+        values="0;0;.7;.16;0;0;.7;.16;0;0"/>
+    </g>
+
+    <!-- 180도 회전해도 서로 자리를 바꾸며 동일하게 남는 시그니처 바 -->
+    <g>
+      <rect class="shirt" x="-243.00" y="-130.86" width="30" height="6" rx="3"/>
+      <rect class="pants" x="213.00" y="124.86" width="30" height="6" rx="3"/>
+      <animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite"
+        calcMode="spline" keyTimes="0;.22;.41;.62;.81;1"
+        keySplines="0 0 1 1;.72 0 .28 1;0 0 1 1;.72 0 .28 1;0 0 1 1"
+        values="0;0;180;180;360;360"/>
+    </g>
+  </g>
+</svg>
